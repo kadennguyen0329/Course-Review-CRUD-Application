@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.MyReviewsController">
+   <children>
+      <TableView fx:id="tableView" layoutX="42.0" layoutY="88.0" prefHeight="554.0" prefWidth="1190.0">
+        <columns>
+          <TableColumn fx:id="mnemonicColumn" prefWidth="124.79998397827148" text="Course Mnemonic" />
+            <TableColumn fx:id="numberColumn" prefWidth="104.00004577636719" text="Course Number" />
+          <TableColumn fx:id="ratingColumn" prefWidth="108.0" text="Rating" />
+            <TableColumn fx:id="commentColumn" prefWidth="852.0000061035157" text="Comments" />
+        </columns>
+      </TableView>
+      <Button fx:id="viewCourse" layoutX="42.0" layoutY="651.0" mnemonicParsing="false" onAction="#handleViewCourse" text="View Selected Course" />
+      <Button fx:id="backToSearch" layoutX="1098.0" layoutY="651.0" mnemonicParsing="false" onAction="#handleBackToSearch" text="Back to Course Search" />
+      <Label layoutX="42.0" layoutY="37.0" text="My Reviews" textFill="#7e9cff">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.CourseSearchScreenController">
+   <children>
+      <TableView fx:id="courseTable" layoutX="44.0" layoutY="154.0" prefHeight="474.0" prefWidth="1190.0">
+        <columns>
+          <TableColumn fx:id="subjectMnemonicColumn" prefWidth="127.99996566772461" text="Course Mnemonic" />
+          <TableColumn fx:id="courseNumberColumn" prefWidth="108.00004577636719" text="Course Number" />
+            <TableColumn fx:id="titleColumn" prefWidth="326.39996337890625" text="Title" />
+            <TableColumn fx:id="averageRatingColumn" prefWidth="631.2000122070312" text="Average Rating" />
+        </columns>
+      </TableView>
+      <Label layoutX="45.0" layoutY="63.0" text="Search by Mnemonic: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="92.0" prefHeight="20.0" prefWidth="130.0" text="Search by Number:  ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="120.0" text="Search by Title: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchMnemonicField" layoutX="182.0" layoutY="60.0" prefHeight="26.0" prefWidth="124.0" />
+      <TextField fx:id="searchNumberField" layoutX="168.0" layoutY="89.0" prefHeight="26.0" prefWidth="137.0" />
+      <TextField fx:id="searchTitleField" layoutX="142.0" layoutY="117.0" prefHeight="13.0" prefWidth="163.0" />
+      <Label layoutX="902.0" layoutY="36.0" prefHeight="18.0" prefWidth="183.0" text="Can't Find a Course? Add it here:" textFill="#7b9eff" />
+      <Button layoutX="132.0" layoutY="640.0" mnemonicParsing="false" onAction="#viewCoursesPressed" text="View Selected Course" />
+      <Label layoutX="904.0" layoutY="64.0" text="New Mnemonic: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="904.0" layoutY="93.0" text="New Number: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="904.0" layoutY="121.0" text="New Title:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="myReviewsButton" layoutX="45.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleMyReviews" text="My Reviews" />
+      <Button layoutX="1179.0" layoutY="640.0" mnemonicParsing="false" onAction="#switchToLoginScreen" text="Logout" />
+      <TextField fx:id="newMnemonicField" layoutX="1009.0" layoutY="61.0" prefHeight="26.0" prefWidth="124.0" />
+      <TextField fx:id="newNumberField" layoutX="994.0" layoutY="90.0" prefHeight="26.0" prefWidth="139.0" />
+      <TextField fx:id="newTitleField" layoutX="971.0" layoutY="118.0" prefHeight="15.0" prefWidth="163.0" />
+      <Button fx:id="addCourseButton" layoutX="1149.0" layoutY="118.0" mnemonicParsing="false" onAction="#addCoursePressed" text="Add Course" />
+      <Button fx:id="courseSearchButton" layoutX="323.0" layoutY="117.0" mnemonicParsing="false" onAction="#searchCoursesPressed" text="Search Course" />
+      <Label layoutX="40.0" layoutY="32.0" text="Course Search" textFill="#7e9cff">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
